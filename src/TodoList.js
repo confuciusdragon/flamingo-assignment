@@ -1,18 +1,9 @@
 import React from "react";
-import TodoListItem from "./TodoListItem.js"
-
-const todoList = [{
-    id: 1,
-    title: "first"
-  },{
-    id: 2,
-    title: "second"
-  },{
-    id: 3,
-    title: "third"
-  }];
+import TodoListItem from "./TodoListItem.js";
+import defaultItems from "./defaultItems.js";
   
-const TodoList = () => {
+const TodoList = ({todoList}) => {
+    if (todoList.length == 0) todoList = defaultItems;
  return (
     <ul>
         {todoList.map( item => {
