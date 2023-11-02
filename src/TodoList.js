@@ -3,7 +3,7 @@ import TodoListItem from "./TodoListItem.js";
 import defaultItems from "./defaultItems.js";
   
 const TodoList = ({todoList}) => {
-    if (todoList.length == 0) todoList = defaultItems;
+    if (todoList.length === 0) todoList = defaultItems;
  return (
     <ul>
         {todoList.map( item => {
